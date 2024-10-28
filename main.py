@@ -15,13 +15,12 @@ if args.colour == "blue":
     print("You selected the colour blue!\n\n")
 
     original_file = open("/home/hayden/.config/i3/config", "r")
-    #print(file.read())
 
-    read_lines = original_file.readlines()
-
-    print(read_lines)
-    for line in file:
+    lines = original_file.readlines()
+    for line in lines:
         
         if "client.focused" in line:
-            client_focused_line = "client.focused #0096FF #0096FF #000000 #0096FF"
+            lines[lines.index(line)] = "client.focused #0096FF #0096FF #000000 #0096FF"
+
+    print(lines)
     file.close()
