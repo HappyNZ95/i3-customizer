@@ -24,7 +24,7 @@ if args.colour == "blue":
     for line in lines:
         
         if "client.focused" in line and "_inactive" not in line:
-            line = "client.focused           #0096FF #0096FF #000000 #0096FF\n"
+            line = "client.focused           #0096FF #0096FF #ffffff #0096FF ##0096FF\n"
 
         new_file_text += line
     
