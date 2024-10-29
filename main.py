@@ -33,3 +33,44 @@ if args.colour == "blue":
     new_file = open(i3_config_file_path, "w")
     new_file.write(new_file_text)
     new_file.close()
+
+if args.colour == "pywal":
+
+    print("You selected the pywal colour scheme!\n\n")
+
+    original_file = open(i3_config_file_path, "r")
+
+    lines = original_file.readlines()
+    #for index, line in enumerate(lines):
+    for line in lines:
+        
+        if "client.focused" in line and "_inactive" not in line:
+            line = "client.focused $bg $bg $fg $bg $bg\n"
+
+        new_file_text += line
+    
+    original_file.close()
+
+    new_file = open(i3_config_file_path, "w")
+    new_file.write(new_file_text)
+    new_file.close()
+
+
+def change_i3_titlebar_colours(colour):
+    print(f"you have selected the {colour} scheme!")
+
+    original_file = open(i3_config_file_path, "r")
+    lines = original_file.readlines()
+
+    for line in lines:
+        if "client.focused" in line and "_inactive" not in line:
+            line = "client.focused # # # # #"
+        
+        new_file_text += line
+
+        original_file.close()
+
+        new_file = open(i3_config_file_path, "w")
+        new_file.write(new_file_text)
+        new_file.close()
+
