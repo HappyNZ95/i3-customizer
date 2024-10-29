@@ -15,7 +15,7 @@ new_file_text = ""
 
 if args.colour == "blue":
 
-    print("You selected the colour blue!\n\n")
+    print("You selected the blue colour scheme!\n\n")
 
     original_file = open(i3_config_file_path, "r")
 
@@ -34,6 +34,42 @@ if args.colour == "blue":
     new_file.write(new_file_text)
     new_file.close()
 
+if args.colour == "green":
+
+    print("You selected the green colour scheme!\n\n")
+
+    original_file = open(i3_config_file_path, "r")
+
+    lines = original_file.readlines()
+    #for index, line in enumerate(lines):
+    for line in lines:
+        
+        if "client.focused" in line and "_inactive" not in line:
+            line = "client.focused          #2e6f40 #2e6f40 #000000 #2e6f40 #2e6f40 \n"
+
+        new_file_text += line
+    
+    original_file.close()
+
+    new_file = open(i3_config_file_path, "w")
+    new_file.write(new_file_text)
+    new_file.close()
+
+if args.colour == "pywal":
+
+    print("You selected the pywal colour scheme!\n\n")
+
+    original_file = open(i3_config_file_path, "r")
+
+    lines = original_file.readlines()
+    #for index, line in enumerate(lines):
+    for line in lines:
+        
+        if "client.focused" in line and "_inactive" not in line:
+            line = "client.focused $bg $bg $fg $bg $bg\n"
+
+        new_file_text += line
+    
 if args.colour == "pywal":
 
     print("You selected the pywal colour scheme!\n\n")
