@@ -1,6 +1,7 @@
 import argparse
 import os
 
+
 parser = argparse.ArgumentParser(description="A simple CLI program to customize the colours in i3wm.")
 i3_config_file_path = os.path.expanduser("~/.config/i3/config")
 # ArgumentParser
@@ -13,6 +14,11 @@ client_focused_line = ""
 
 new_file_text = ""
 
+def isComment(line):
+    if line.lstrip()[0] == "#":
+        return True
+    return False
+
 if args.colour == "blue":
 
     print("You selected the blue colour scheme!\n\n")
@@ -23,7 +29,7 @@ if args.colour == "blue":
     #for index, line in enumerate(lines):
     for line in lines:
         
-        if "client.focused" in line and "_inactive" not in line:
+        if "client.focused" in line and "_inactive" not in line and not isComment(line):
             line = "client.focused           #0096FF #0096FF #ffffff #0096FF ##0096FF\n"
 
         new_file_text += line
