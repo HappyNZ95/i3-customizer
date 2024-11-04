@@ -15,11 +15,19 @@ client_focused_line = ""
 #new_file_text = ""
 
 colour_schemes = {
+
         "blue": {
-            "client.focused": "client.focused       #0096FF #0096FF #ffffff #0096FF #0096FF \n"
+            "client.focused": "client.focused       #7189FF#7189FF#7189FF#7189FF #C1CEFE \n"
             },
         "green": {
             "client.focused": "client.focused       #2e6f40 #2e6f40 #000000 #2e6f40 #2e6f40 \n"
+            },
+        "lavendar": {
+            "client.focused": "client.focused       #624CAB#624CAB#624CAB #624CAB #ffffff \n"
+            },
+
+        "pywal": {
+            "client.focused": "client.focused       $bg $bg $fg $bg $bg \n"
             }
         }
 
