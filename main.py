@@ -17,13 +17,13 @@ client_focused_line = ""
 colour_schemes = {
 
         "blue": {
-            "client.focused": "client.focused       #7189FF#7189FF#7189FF#7189FF #C1CEFE \n"
+            "client.focused": "client.focused #7189FF #7189FF #C1CEFE #7189FF #7189FF \n"
             },
         "green": {
             "client.focused": "client.focused       #2e6f40 #2e6f40 #000000 #2e6f40 #2e6f40 \n"
             },
         "lavendar": {
-            "client.focused": "client.focused       #624CAB#624CAB#624CAB #624CAB #ffffff \n"
+            "client.focused": "client.focused       #624CAB#624CAB#624CAB #624CAB #ffffff #624CAB \n"
             },
 
         "pywal": {
